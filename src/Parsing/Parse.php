@@ -32,10 +32,11 @@ class Parse
                     'number' => $numbers[0],
                     'weight' => $numbers[1],
                 ];
+                continue;
             }
 
-            if (preg_match_all("/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/", $item, $mathesPhone)) {
-                $resultData[$count]['phone'] = $mathesPhone[0];
+            if (preg_match_all('/[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}/', $item, $matchesPhone)) {
+                $resultData['phone'] = $matchesPhone[0];
             }
         }
 
