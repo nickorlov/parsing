@@ -1,0 +1,21 @@
+{
+    "name": "neserag95/parsing",
+    "type": "project",
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "neserag95",
+            "email": "neserag95@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "ext-json": "*"
+    }
+}
